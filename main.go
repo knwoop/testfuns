@@ -40,7 +40,7 @@ func run() error {
 			for _, d := range astFile.Decls {
 				if fn, isFn := d.(*ast.FuncDecl); isFn {
 					if strings.HasPrefix(fn.Name.Name, "Test") {
-						fmt.Printf("%s in file: %s\n", fn.Name.Name, path)
+						fmt.Printf("%s\n", fn.Name.Name)
 					}
 				}
 			}
